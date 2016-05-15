@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.nipuna.testplugin" version="0.2.3">
+    <name>Test Plugin</name>
+    <description>Nipuna Test Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>test plugin</keywords>
+    <js-module src="TestPlugin.js" name="TestPlugin">
+        <clobbers target="TestPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="TestPlugin">
+                <param name="ios-package" value="TestPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="TestPlugin.h" />
+        <source-file src="TestPlugin.m" />
+    </platform>
+</plugin>
